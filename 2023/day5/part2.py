@@ -1,6 +1,6 @@
 inputs, * \
     blocks = open(
-        r"K:\rs_projects\advent_of_code\2023\day5\src\bin\input.txt").read().split("\n\n")
+        r"YOUR INPUT HERE!!!!").read().split("\n\n")
 
 inputs = list(map(int, inputs.split(":")[1].split()))
 
