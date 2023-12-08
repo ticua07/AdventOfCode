@@ -5,12 +5,12 @@ fn main() {
     let mut sum = 0;
 
     for line in input.lines() {
-        sum += part1(line);
+        sum += part2(line);
     }
     println!("{sum}")
 }
 
-fn part1(input: &str) -> u32 {
+fn part2(input: &str) -> u32 {
     // Max number of:
     // red cubes -> 12
     // green cubes -> 13

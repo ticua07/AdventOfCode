@@ -26,24 +26,7 @@ fn score_hand(hand: &str) -> (HandType, (u32, u32, u32, u32, u32)) {
 
     let counts = hand.chars().counts();
 
-    let values = if let Some(joker_count) = counts.get(&'J') {
-        if *joker_count == 5 {
-            "5".to_string()
-        } else {
-            counts
-                .iter()
-                .filter_map(|(key, val)| (key != &'J').then_some(val))
-                .sorted()
-                .with_position()
-                .map(|(pos, value)| match pos {
-                    Position::Last | Position::Only => value + joker_count,
-                    _ => *value,
-                })
-                .join("")
-        }
-    } else {
-        counts.values().sorted().join("")
-    };
+    let values = counts.values().sorted().join("");
 
     let hand_type = match values.deref() {
         "5" => FiveOfAKind,
@@ -61,7 +44,7 @@ fn score_hand(hand: &str) -> (HandType, (u32, u32, u32, u32, u32)) {
             'A' => 14,
             'K' => 13,
             'Q' => 12,
-            'J' => 1,
+            'J' => 11,
             'T' => 10,
             val => val.to_digit(10).unwrap(),
         })

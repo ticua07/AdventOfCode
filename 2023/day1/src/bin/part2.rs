@@ -1,5 +1,3 @@
-#![allow(unused_variables, dead_code)]
-
 fn main() {
     let input = include_str!("./input.txt");
 
