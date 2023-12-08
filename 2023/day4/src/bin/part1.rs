@@ -6,8 +6,8 @@ fn main() {
 fn part1(input: &str) {
     let mut sum = 0;
     for line in input.lines() {
-        let (mut game_id, mut data) = line.split_once(":").unwrap();
-        game_id = game_id.split_ascii_whitespace().last().unwrap();
+        let (mut _game_id, mut data) = line.split_once(":").unwrap();
+        _game_id = _game_id.split_ascii_whitespace().last().unwrap();
         data = data.trim();
         let scratchcard: Vec<&str> = data.split("|").map(|f| f.trim()).collect();
 

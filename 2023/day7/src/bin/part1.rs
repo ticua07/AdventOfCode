@@ -5,7 +5,7 @@ use itertools::{Itertools, Position};
 
 #[derive(Debug)]
 struct Hand<'a> {
-    cards: &'a str,
+    _cards: &'a str,
     bid: u32,
     score: (HandType, (u32, u32, u32, u32, u32)),
 }
@@ -77,7 +77,7 @@ fn process(input: &str) -> String {
         .map(|f| {
             let (cards, bid) = f.split_once(" ").unwrap();
             Hand {
-                cards,
+                _cards: cards,
                 bid: bid.parse().expect("should be a number"),
                 score: score_hand(cards),
             }
