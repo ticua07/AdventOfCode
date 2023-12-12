@@ -1,0 +1,2 @@
+# Day 11
+Really easy day too (compared to the others), only thing I *"copied"* was the idea to use [taxicab geometry](https://en.wikipedia.org/wiki/Taxicab_geometry) to find the paths [from this video](https://www.youtube.com/watch?v=N3Y5ZSzAvXU)
